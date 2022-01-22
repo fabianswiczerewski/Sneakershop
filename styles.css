@@ -1,0 +1,294 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  perspective: 1000px;
+    transform-style: preserve-3d;
+    background-color: #072227;
+}
+.containers{
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.container, .container1{
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.card1, .card3, .card {
+  font-family: "Poppins", sans-serif;
+  width: 380px;
+  height: 500px;
+  display: inline-block;
+  text-align: center;
+  margin: 60px 40px;
+  transform-style: preserve-3d;
+  border-radius: 30px;
+  padding: 0 3rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.title, .title1{
+  margin-top: 20px;
+}
+.sneaker, .sneaker1 {
+  transform-style: preserve-3d;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.sneaker img, .sneaker1 img {
+  width: 10rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width:8rem;
+  height:8rem;
+  background: linear-gradient(
+    to right,
+    rgba(137, 44, 220, 0.75),
+    rgba(226,225,231, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info, .info1, .info3{
+  transform-style: preserve-3d;
+  transition: all 0.75s ease-out;
+}
+
+.info h1 , .info1 h1, .info3 h1{
+  font-size: 1.5rem;
+  color: #eeeeee;
+  text-align: center;
+  transition: all 0.75s ease-out;
+}
+.info h3, .info1 h3, .info3 h3{
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem 0;
+  color: #eeeeee;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+
+.sizes, .sizes1 {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+.sizes button , .sizes1 button{
+  padding: 0.2rem 1.3rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight:500;
+  color: #585858;
+  font-family: "Poppins", sans-serif;
+}
+button.active {
+  background: #585858;
+  color: #eeeeee;
+}
+.purchase, .purchase1{
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.75s ease-out;
+  color: #EEEEEE;
+}
+
+
+
+
+
+
+
+/* NAVBAR */
+
+.navbar {
+  font-size: 20px;
+  background-color:#BC6FF1 ;
+  color: #072227;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.main-nav {
+  list-style-type: none;
+}
+
+.logo {
+  text-decoration: none;
+  color: #072227;
+}
+
+.nav-links, .main-nav li {
+  text-decoration: none;
+  letter-spacing: 2px;
+  color:#52057B;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 28px;
+  margin-left: 40px;
+  letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 60px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+}
+/* BUTTON */
+
+.pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #5C2191;
+  }
+  .front {
+    display: block;
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #eeeeee;
+    background: #892CDC;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  .pushable:hover {
+    filter: brightness(110%);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  }
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* FIRST CARD */
+
+  .container1 .card1 {
+    background: rgba(255, 255, 255, 0.01);
+    overflow: hidden;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+
+  }
+
+/* THIRD CONTAINER */
+.container1 .card3{
+  background-color: #072227;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+  inset -5px -5px 15px rgba(255,255,255,0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.3),
+  -5px -5px 5px rgba(255,255,255,0.1);
+}
+
+.container1 .card3 .box3{
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 20px 38px;
+  box-shadow: 0 20px 50px rgba(0,0,0, 0.5);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.container1 .card3 .box3 .sizes1{
+  margin: 0 1px;
+}
+
+.container1 .card3:hover .box3 {
+  background-color: #072227;
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px #BC6FF1;
+}
+.card{
+  box-shadow: 0 0 30px -8px #BC6FF1;
+}
+.content3{
+  position: relative;
+  bottom:30px;
+}

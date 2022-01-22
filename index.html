@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,200&family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+  <title>Sneakershop</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR  -->
+  <nav class="navbar">
+    <a href="#" class="logo">SNEAKERSHOP</a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="#" class="nav-links">LIFESTYLE</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">SKATEBOARDING</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">FOOTBALL</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- CONTAINER AND CARDS -->
+  <section class="containers">
+
+    <div class="container1">
+      <div class="card1">
+        <div class="sneaker1">
+          <div class="circle"></div>
+          <img src="./images/forum-low.png" alt="adidas">
+        </div>
+        <div class="info1">
+          <h1 class="title1">Adidas FORUM LOW</h1>
+          <h3>PROGRESSIVE TRAINERS MADE FOR THE CITY. STAND OUT IN THE CONCRETE JUNGLE</h3>
+          <div class="sizes1">
+            <button>38</button>
+            <button class="active">39</button>
+            <button>40</button>
+            <button>41</button>
+          </div>
+          <div class="purchase1">
+            <button class="pushable">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              PURCHASE
+            </span>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+    <div class="card">
+      <div class="sneaker">
+        <div class="circle"></div>
+        <img src="./images/nmd-blue.png" alt="adidas">
+      </div>
+      <div class="info">
+        <h1 class="title">Adidas NMD</h1>
+        <h3>FUTURE-READY TRAINERS WITH WRAPPED BOOST FOR EXCEPTION COMFORT.</h3>
+        <div class="sizes">
+          <button>39</button>
+          <button>40</button>
+          <button class="active">42</button>
+          <button>44</button>
+        </div>
+        <div class="purchase">
+          <button class="pushable">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">
+            PURCHASE
+          </span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container1">
+      <div class="card3">
+        <div class="box3">
+          <div class="content3">
+            <div class="sneaker">
+              <div class="circle"></div>
+              <img src="./images/ultraboost-blue.png" alt="adidas">
+            </div>
+            <div class="info1">
+              <h1 class="title1">Adidas ULTRABOOST</h1>
+              <h3>A LITTLE EXTRA PUSH. THE ULTRABOOST RUNNING SHOES SERVE UP COMFORT AND RESPONSIVENESS.</h3>
+              <div class="sizes1">
+                <button>41</button>
+                <button>42</button>
+                <button>43</button>
+                <button class="active">44</button>
+              </div>
+              <div class="purchase">
+                <button class="pushable">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">
+                  PURCHASE
+                </span>
+              </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<script src="./app.js"></script>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".card1"), {
+		max: 12,
+		speed: 2000,
+    easing:"cubic-bezier(.03,.98,.52,.99)",
+    startX:                 0,      // the starting tilt on the X axis, in degrees.
+    startY:                 0,
+     reset:                  true,
+    perspective: 1500,
+    reverse: true,
+    glare: true,
+    gyroscope: false,
+    "max-glare": 0.4
+	});
+  </script>
+
+</body>
+
+</html>
